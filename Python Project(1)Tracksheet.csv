@@ -1,0 +1,39 @@
+,,,,,,,
+,,,,,,,
+Work cycle of Data Analysis,,1,Description,,Rows,Columns,
+Data  Collection,,,This dataset based on a human is mental health problem for useing social media ,,5000,15,
+Data Understanding,Data Description (modelling),,,,,,
+,feature understandin,2,Understanding the Feature,Explanation,Datatype,Null values,Unique values
+,Segementation Analysis,,person_name,this feature is mentioned identifies the individual records,object,0,891
+Data Cleaning & Transformation,Data type of feature,,age,age of the each persons,int64,0,57
+,Missing values,,gender,it gives based on a human type,object,0,686
+,Duplicate rows,,plateform,"This is a social media platform like instagram,tiktok,ect",object,0,3
+,Duplicate (unique Columns),,daily_screen_time_min,Total daily screen usuage in minutes,int64,0,7
+EDA - Explotary data analysis,,,social_media_time_min,How many time take to spend in social media per day,int64,0,34
+Data visualisation,,,negative_interactions_count,"Number of negative interaction like arguments,harrasment",int64,0,3
+Final Insights,,,positive_interactions_count,"This feature defines number of positive interaction like,support ",int64,0,5
+,,,sleep_hours,How many hours to spend for their sleeping ,float64,0,19
+,,,physical_activity_min,Time spend on physical  activities per day,int64,0,36
+,,,anxiety_level,Expresses the intensity of nervousness,int64,0,4
+,,,stress_level,Indicates the pressure or mental strain felt in daily life.,int64,0,5
+,,,mood_level,Represents the person’s general emotional state over a given period.,int64,0,4
+,,,mental_state,Summarizes overall psychological well being based on physical factor,object,0,3
+,,,,,,,
+,,3,Modeling / Segementation Analysis,Questions,Feature,Process,Output
+,,,People Analysis,Which gender has the maximum of stress level ?,"gender-groupby,stress level",sum,Female    17563
+,,,person_name,How many peoples more than 40 and less than 40?,age-filter,>= and<=,Below 40 - 81.3
+,,,age,Which gender reports higher stress on average?,"gender-groupby,stress level",mean,Male      7.118253
+,,,gender,which gender are more active on social media?,"gender-groupby,social media ",sum,Female    433526
+,,,Social Media Analysis,Which gender has more useing Hinstagram?,"platform-get_group,gender-groupby",count,Male      347
+,,,plateform,Which platform has the highest average screen time?,"platform-groupby, screen time",mean,WhatsApp     382.480282
+,,,daily_screen_time_min,Which platform shows more negative interactions?,"platform-groupby, negative interactions",sum,TikTok       1200
+,,,negative_interactions_count,Which gender have average of negative_interactions_count ?,"gender-groupby,negative_interactions_count",mean,Other     0.909091
+,,,positive_interactions_count,which gender take more sleep hours ?,"gender-groupby,sleep hours",sum,Female    17644.3
+,,,social_media_time_min,How many peoples spending highest time in social media ?,"gender-groupby,social madia",max,Female    338
+,,,Physical Analysis,what is the average level of sleep hours ?,"stress level-groupby,sleep hour",mean,5    8.030576
+,,,sleep_hours,How many hours to spend for physical activity,physical activity-groupby,count,people-2 to 10
+,,,physical_activity_min,How many users sleep more than 8 hours and less than 8 hours?,spleep hours-filter,>= and<=,below 8 hours- 89.6%
+,,,anxiety_level,How many users exercise more than 30 minutes daily and less than 30min?,physical activity-filter,>= and<=,Below30min-75%
+,,,stress_level,Which platform are creat average mood level ?,"mood level -groupby,platform",mean,WhatsApp     6.357746
+,,,mood_level,How many platform are there in this dataset ?,"platform-groupby,gender",count,WhatsApp     710
+,,,mental_state,,,,
